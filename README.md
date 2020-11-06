@@ -32,6 +32,11 @@ This code needs a few libraries to run
 
 ## Developer guide ##
 
+### Constructor ###
+```Python
+lo = LiveObjects.Connection("mqttID",LiveObjects.NONE,"<APIKEY>")
+```
+
 ### Declare parameters ###
 You can update over the air some parameters of your sketch using Live Objects's parameters. Parameters and Commands must be declared **before** your device connects to Live Objects.
 
@@ -132,5 +137,6 @@ def foo():
      #Do some stuff
      #...
      lo.loop(); #Keep this in main loop
+  lo.disconnect()
 }
 ```
